@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_pagination/counter/counter.dart';
 import 'package:flutter_bloc_pagination/l10n/l10n.dart';
+import 'package:flutter_bloc_pagination/posts/posts.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const PostsPage(),
     );
   }
 }
