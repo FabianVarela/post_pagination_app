@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc_pagination/app/dependencies/app_register.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -25,9 +26,8 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
 
+  AppRegister.registerDependencies();
   Bloc.observer = const AppBlocObserver();
-
-  // Add cross-flavor configuration here
 
   runApp(await builder());
 }
