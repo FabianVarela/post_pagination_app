@@ -11,13 +11,13 @@ class PaginationService implements PaginationServiceContract {
 
   @override
   Future<List<PostResponseModel>> getPostList({
-    required int index,
+    required int page,
     required int limit,
   }) async {
     final response = await dio.get<dynamic>(
       _postPath,
       queryParameters: <String, dynamic>{
-        '_start': index,
+        '_page': page,
         '_limit': limit,
       },
     );
