@@ -1,7 +1,35 @@
-/// {@template pagination_service}
-/// A Very Good Project created by Very Good CLI.
-/// {@endtemplate}
-class PaginationService {
-  /// {@macro pagination_service}
-  const PaginationService();
+import 'package:dio/dio.dart';
+import 'package:pagination_service/src/contract/pagination_service_contract.dart';
+import 'package:pagination_service/src/models/posts/post_response_model.dart';
+
+class PaginationService implements PaginationServiceContract {
+  PaginationService({required this.dio});
+
+  final Dio dio;
+
+  static const _postPath = 'posts';
+
+  @override
+  Future<List<PostResponseModel>> getPostList({
+    required int index,
+    required int limit,
+  }) async {
+    final response = await dio.get<dynamic>(
+      _postPath,
+      queryParameters: <String, dynamic>{
+        '_start': index,
+        '_limit': limit,
+      },
+    );
+
+    if (response.statusCode == 200) {
+      final responseList = response.data as List<dynamic>;
+      return [
+        for (final item in responseList)
+          PostResponseModel.fromJson(item as Map<String, dynamic>),
+      ];
+    } else {
+      throw Exception('Error getting posts');
+    }
+  }
 }
