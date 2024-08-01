@@ -16,6 +16,7 @@ dependencies:
   flutter_hooks: ^0.20.5
   flutter_localizations:
     sdk: flutter
+  gap: ^3.0.1
   get_it: ^7.7.0
   intl: ^0.19.0
   pagination_service:
