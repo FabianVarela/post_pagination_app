@@ -166,6 +166,18 @@ flutter gen-l10n --arb-dir="lib/l10n/arb"
 
 Alternatively, run `flutter run` and code generation will take place automatically.
 
+## Add JSON file to `dart-define` 🔐
+
+You must add on the root project the `api-keys.json` file to works correctly the `dart-define-from-file` command.
+
+The JSON structure.
+
+```json
+{
+    "BASE_API_URL": "https://jsonplaceholder.typicode.com/"
+}
+```
+
 [coverage_badge]: coverage_badge.svg
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
