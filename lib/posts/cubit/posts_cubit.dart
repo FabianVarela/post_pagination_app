@@ -8,8 +8,8 @@ part 'posts_state.dart';
 class PostCubit extends Cubit<PostsState> {
   PostCubit() : super(const PostsStateInitial());
 
-  late final PaginationService _paginationService = getIt<PaginationService>();
-  late int currentPage = 1;
+  late final _paginationService = getIt<PaginationService>();
+  late int _currentPage = 1;
 
   Future<void> loadPosts({int limit = 20}) async {
     if (state is PostsStateLoading) return;
@@ -23,11 +23,11 @@ class PostCubit extends Cubit<PostsState> {
     emit(PostsStateLoading(posts: currentPosts));
     try {
       final posts = await _paginationService.getPostList(
-        page: currentPage,
+        page: _currentPage,
         limit: limit,
       );
 
-      if (posts.isNotEmpty) currentPage++;
+      if (posts.isNotEmpty) _currentPage++;
       final loadingPosts = (state as PostsStateLoading).posts..addAll(posts);
 
       emit(PostsStateLoaded(posts: loadingPosts, hasLimit: posts.isEmpty));
