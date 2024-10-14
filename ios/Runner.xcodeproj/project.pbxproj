@@ -367,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,7 +461,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,7 +550,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,7 +644,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[DEV] Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "[DEV] Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -736,7 +736,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[DEV] Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "[DEV] Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -827,7 +827,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[DEV] Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "[DEV] Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -921,7 +921,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[STG] Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "[STG] Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1015,7 +1015,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[STG] Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "[STG] Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1104,7 +1104,7 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 2GBQH74K82;
 				ENABLE_BITCODE = NO;
-				FLAVOR_APP_NAME = "[STG] Flutter Bloc Pagination";
+				FLAVOR_APP_NAME = "[STG] Post pagination - App";
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

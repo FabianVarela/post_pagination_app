@@ -95,7 +95,7 @@ BEGIN
             VALUE "InternalName", "post_pagination_app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.developer.fabian.post-pagination-app. All rights reserved." "\0"
             VALUE "OriginalFilename", "post_pagination_app.exe" "\0"
-            VALUE "ProductName", "Flutter Bloc Pagination" "\0"
+            VALUE "ProductName", "Post pagination - App" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

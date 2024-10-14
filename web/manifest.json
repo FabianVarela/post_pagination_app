@@ -1,6 +1,6 @@
 {
-    "name": "Flutter Bloc Pagination",
-    "short_name": "Flutter Bloc Pagination",
+    "name": "Post pagination app",
+    "short_name": "Post pagination app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

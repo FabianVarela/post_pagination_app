@@ -1,4 +1,4 @@
-# Flutter Bloc Pagination
+# Post pagination - App
 
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
@@ -31,7 +31,7 @@ $ flutter run --flavor staging --target lib/main_staging.dart
 $ flutter run --flavor production --target lib/main_production.dart
 ```
 
-_\*Flutter Bloc Pagination works on iOS, Android, Web, and Windows._
+_\*Post pagination - App works on iOS, Android, Web, and Windows._
 
 ---
 
@@ -57,7 +57,8 @@ $ open coverage/index.html
 
 ## Working with Translations 🌐
 
-This project relies on [flutter_localizations][flutter_localizations_link] and follows the [official internationalization guide for Flutter][internationalization_link].
+This project relies on [flutter_localizations][flutter_localizations_link] and follows
+the [official internationalization guide for Flutter][internationalization_link].
 
 ### Adding Strings
 
@@ -106,15 +107,11 @@ Widget build(BuildContext context) {
 Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info.plist` to include the new locale.
 
 ```xml
-    ...
-
-    <key>CFBundleLocalizations</key>
-	<array>
-		<string>en</string>
-		<string>es</string>
-	</array>
-
-    ...
+<key>CFBundleLocalizations</key>
+<array>
+    <string>en</string>
+    <string>es</string>
+</array>
 ```
 
 ### Adding Translations
@@ -174,15 +171,22 @@ The JSON structure.
 
 ```json
 {
-    "BASE_API_URL": "https://jsonplaceholder.typicode.com/"
+  "BASE_API_URL": "https://jsonplaceholder.typicode.com/"
 }
 ```
 
 [coverage_badge]: coverage_badge.svg
+
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
+
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
+
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
+
 [license_link]: https://opensource.org/licenses/MIT
+
 [very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
+
 [very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
+
 [very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli

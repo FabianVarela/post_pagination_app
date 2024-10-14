@@ -80,17 +80,17 @@ android {
         production {
             dimension "default"
             applicationIdSuffix ""
-            manifestPlaceholders = [appName: "Flutter Bloc Pagination"]
+            manifestPlaceholders = [appName: "Post pagination - App"]
         }
         staging {
             dimension "default"
             applicationIdSuffix ".stg"
-            manifestPlaceholders = [appName: "[STG] Flutter Bloc Pagination"]
+            manifestPlaceholders = [appName: "[STG] Post pagination - App"]
         }
         development {
             dimension "default"
             applicationIdSuffix ".dev"
-            manifestPlaceholders = [appName: "[DEV] Flutter Bloc Pagination"]
+            manifestPlaceholders = [appName: "[DEV] Post pagination - App"]
         }
     }
 
