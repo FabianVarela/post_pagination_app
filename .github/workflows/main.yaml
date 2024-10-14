@@ -1,4 +1,4 @@
-name: flutter_bloc_pagination
+name: post_pagination_app
 
 concurrency:
   group: $-$

@@ -1,4 +1,4 @@
-package com.example.verygoodcore.flutter_bloc_pagination
+package com.developer.fabian.post_pagination_app
 
 import io.flutter.embedding.android.FlutterActivity
 

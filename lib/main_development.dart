@@ -1,5 +1,5 @@
-import 'package:flutter_bloc_pagination/app/app.dart';
-import 'package:flutter_bloc_pagination/bootstrap.dart';
+import 'package:post_pagination_app/app/app.dart';
+import 'package:post_pagination_app/bootstrap.dart';
 
 void main() {
   bootstrap(() => const App());

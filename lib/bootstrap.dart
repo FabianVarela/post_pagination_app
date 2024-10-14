@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc_pagination/app/dependencies/app_register.dart';
+import 'package:post_pagination_app/app/dependencies/app_register.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();

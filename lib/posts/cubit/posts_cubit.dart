@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_bloc_pagination/app/dependencies/app_register.dart';
 import 'package:pagination_service/pagination_service.dart';
+import 'package:post_pagination_app/app/dependencies/app_register.dart';
 
 part 'posts_state.dart';
 

@@ -1,6 +1,6 @@
-import 'package:flutter_bloc_pagination/app/app.dart';
-import 'package:flutter_bloc_pagination/posts/posts.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:post_pagination_app/app/app.dart';
+import 'package:post_pagination_app/posts/posts.dart';
 
 void main() {
   group('App', () {
