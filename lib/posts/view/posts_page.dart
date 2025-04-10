@@ -31,18 +31,12 @@ class PostView extends HookWidget {
         title: const Text('Blog'),
         bottom: TabBar(
           controller: tabController,
-          tabs: const <Tab>[
-            Tab(text: 'Posts'),
-            Tab(text: 'Other'),
-          ],
+          tabs: const <Tab>[Tab(text: 'Posts'), Tab(text: 'Other')],
         ),
       ),
       body: TabBarView(
         controller: tabController,
-        children: const <Widget>[
-          _PostList(),
-          Offstage(),
-        ],
+        children: const <Widget>[_PostList(), Offstage()],
       ),
     );
   }
@@ -67,9 +61,7 @@ class _PostList extends HookWidget {
       child: BlocBuilder<PostCubit, PostsState>(
         builder: (_, state) {
           if (state is PostsStateLoading && state.posts.isEmpty) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
+            return const Center(child: CircularProgressIndicator());
           }
 
           var isLoadingData = false;
@@ -86,13 +78,16 @@ class _PostList extends HookWidget {
 
           return ListView.separated(
             controller: scrollController,
-            itemCount: hasLimit
-                ? posts.length
-                : posts.length + (isLoadingData ? 1 : 0),
+            itemCount: switch (hasLimit) {
+              true => posts.length,
+              false => posts.length + (isLoadingData ? 1 : 0),
+            },
             separatorBuilder: (_, __) => Divider(color: Colors.grey[400]),
-            itemBuilder: (_, index) => index < posts.length
-                ? _PostListItem(post: posts[index])
-                : const Center(child: CircularProgressIndicator()),
+            itemBuilder: (_, index) {
+              return index < posts.length
+                  ? _PostListItem(post: posts[index])
+                  : const Center(child: CircularProgressIndicator());
+            },
           );
         },
       ),
@@ -154,10 +149,7 @@ class _PostListItem extends StatelessWidget {
                   RichText(
                     text: const TextSpan(
                       text: 'Read more ',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF5173da),
-                      ),
+                      style: TextStyle(fontSize: 14, color: Color(0xFF5173da)),
                       children: <InlineSpan>[
                         WidgetSpan(
                           alignment: PlaceholderAlignment.middle,
