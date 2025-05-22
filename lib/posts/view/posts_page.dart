@@ -31,7 +31,10 @@ class PostView extends HookWidget {
         title: const Text('Blog'),
         bottom: TabBar(
           controller: tabController,
-          tabs: const <Tab>[Tab(text: 'Posts'), Tab(text: 'Other')],
+          tabs: const <Tab>[
+            Tab(text: 'Posts'),
+            Tab(text: 'Other'),
+          ],
         ),
       ),
       body: TabBarView(

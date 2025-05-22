@@ -21,10 +21,7 @@ class PaginationService implements PaginationServiceContract {
   }) async {
     final response = await dio.get<dynamic>(
       _postPath,
-      queryParameters: <String, dynamic>{
-        '_page': page,
-        '_limit': limit,
-      },
+      queryParameters: <String, dynamic>{'_page': page, '_limit': limit},
     );
 
     if (response.statusCode == 200) {
