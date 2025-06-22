@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:post_pagination_app/features/posts/view/posts_page.dart';
 import 'package:post_pagination_app/l10n/l10n.dart';
-import 'package:post_pagination_app/posts/posts.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
