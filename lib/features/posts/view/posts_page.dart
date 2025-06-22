@@ -4,8 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:pagination_service/pagination_service.dart';
 import 'package:post_pagination_app/app/widgets/keep_alive_wrapper.dart';
-import 'package:post_pagination_app/posts/cubit/posts_cubit.dart';
-import 'package:post_pagination_app/posts/posts.dart';
+import 'package:post_pagination_app/features/posts/cubit/posts_cubit.dart';
 
 class PostsPage extends StatelessWidget {
   const PostsPage({super.key});
