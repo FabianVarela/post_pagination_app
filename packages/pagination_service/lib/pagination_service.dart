@@ -2,4 +2,4 @@
 library;
 
 export 'src/models/models.dart';
-export 'src/pagination_service.dart';
+export 'src/post_service.dart';

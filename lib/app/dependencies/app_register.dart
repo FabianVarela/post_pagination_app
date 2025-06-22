@@ -7,7 +7,7 @@ final getIt = GetIt.instance;
 class AppRegister {
   static void registerDependencies() {
     getIt.registerSingleton(
-      PaginationService(
+      PostService(
         dio: Dio(
           BaseOptions(
             // ignore: avoid_redundant_argument_values

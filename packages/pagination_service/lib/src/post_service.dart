@@ -3,11 +3,11 @@ import 'package:pagination_service/src/contract/pagination_service_contract.dart
 import 'package:pagination_service/src/models/posts/post_response_model.dart';
 
 /// {@template pagination_service}
-/// Service used to fetch data from Json Placeholder API
+/// Service used to fetch post data from Json Placeholder API
 /// {@endtemplate}
-class PaginationService implements PaginationServiceContract {
+class PostService implements PaginationServiceContract {
   /// {@macro pagination_service}
-  PaginationService({required this.dio});
+  PostService({required this.dio});
 
   /// [Dio] class to get configuration
   final Dio dio;
