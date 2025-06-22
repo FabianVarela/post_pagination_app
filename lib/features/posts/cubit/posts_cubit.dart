@@ -15,10 +15,9 @@ class PostCubit extends Cubit<PostsState> {
     if (state is PostsStateLoading) return;
     final currentState = state;
 
-    var currentPosts = <PostResponseModel>[];
-    if (currentState is PostsStateLoaded) {
-      currentPosts = currentState.posts;
-    }
+    final currentPosts = <PostResponseModel>[
+      if (currentState is PostsStateLoaded) ...currentState.posts,
+    ];
 
     emit(PostsStateLoading(posts: currentPosts));
     try {
