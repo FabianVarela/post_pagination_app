@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:post_pagination_app/app/widgets/navigator_tab_container.dart';
+import 'package:post_pagination_app/features/albums/albums.dart';
 import 'package:post_pagination_app/features/posts/posts.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -33,10 +34,10 @@ class AppRouter {
                 routes: <RouteBase>[
                   GoRoute(
                     path: '/albums',
-                    pageBuilder: (_, state) => NoTransitionPage(
-                      child: Container(),
+                    pageBuilder: (_, state) => const NoTransitionPage(
+                      child: AlbumsPage(),
                     ),
-                    routes: [
+                    routes: <RouteBase>[
                       GoRoute(
                         path: ':id',
                         builder: (_, state) => Container(),
