@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pagination_service/pagination_service.dart';
 import 'package:post_pagination_app/app/widgets/pagination_list_view.dart';
 import 'package:post_pagination_app/features/albums/albums.dart';
@@ -40,7 +41,7 @@ class AlbumView extends StatelessWidget {
             return index < albums.length
                 ? _AlbumListItem(
                     album: albums[index],
-                    onClickAlbum: (value) {},
+                    onClickAlbum: (value) => context.go('/albums/$value'),
                   )
                 : const Center(child: CircularProgressIndicator());
           },
