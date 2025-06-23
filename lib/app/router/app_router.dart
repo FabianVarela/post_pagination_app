@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:post_pagination_app/app/widgets/navigator_tab_container.dart';
 import 'package:post_pagination_app/features/albums/albums.dart';
+import 'package:post_pagination_app/features/photos/view/photos_page.dart';
 import 'package:post_pagination_app/features/posts/posts.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -40,7 +41,10 @@ class AppRouter {
                     routes: <RouteBase>[
                       GoRoute(
                         path: ':id',
-                        builder: (_, state) => Container(),
+                        builder: (_, state) {
+                          final pathId = state.pathParameters['id'] ?? '';
+                          return PhotosPage(albumId: int.tryParse(pathId)!);
+                        },
                       ),
                     ],
                   ),
