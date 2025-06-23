@@ -122,7 +122,7 @@ class _PostListItem extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.network(
-                  'https://picsum.photos/seed/picsum/200',
+                  'https://picsum.photos/200',
                   fit: BoxFit.fill,
                 ),
               ),
