@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:pagination_service/pagination_service.dart';
-import 'package:post_pagination_app/app/widgets/keep_alive_wrapper.dart';
+import 'package:post_pagination_app/app/widgets/pagination_list_view.dart';
 import 'package:post_pagination_app/features/posts/cubit/posts_cubit.dart';
 
 class PostsPage extends StatelessWidget {
@@ -23,50 +23,27 @@ class PostView extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scrollController = useScrollController();
+    return BlocBuilder<PostCubit, PostsState>(
+      builder: (_, state) {
+        final posts = switch (state) {
+          PostsStateLoading(posts: final posts) => posts,
+          PostsStateLoaded(posts: final posts) => posts,
+          _ => <PostResponseModel>[],
+        };
 
-    scrollController.addListener(() {
-      final maxScroll = scrollController.position.maxScrollExtent;
-      final currentScroll = scrollController.position.pixels;
-      if (maxScroll - currentScroll <= 200) {
-        context.read<PostCubit>().loadPosts();
-      }
-    });
-
-    return KeepAliveWrapper(
-      child: BlocBuilder<PostCubit, PostsState>(
-        builder: (_, state) {
-          if (state is PostsStateLoading && state.posts.isEmpty) {
-            return const Center(child: CircularProgressIndicator());
-          }
-
-          var isLoadingData = false;
-          if (state is PostsStateLoading) {
-            isLoadingData = !isLoadingData;
-          }
-
-          final posts = switch (state) {
-            PostsStateLoading(posts: final posts) => posts,
-            PostsStateLoaded(posts: final posts) => posts,
-            _ => <PostResponseModel>[],
-          };
-          final hasLimit = (state is PostsStateLoaded) && state.hasLimit;
-
-          return ListView.separated(
-            controller: scrollController,
-            itemCount: switch (hasLimit) {
-              true => posts.length,
-              false => posts.length + (isLoadingData ? 1 : 0),
-            },
-            separatorBuilder: (_, __) => Divider(color: Colors.grey[400]),
-            itemBuilder: (_, index) {
-              return index < posts.length
-                  ? _PostListItem(post: posts[index])
-                  : const Center(child: CircularProgressIndicator());
-            },
-          );
-        },
-      ),
+        return PaginationListView(
+          itemCount: posts.length,
+          isLoading: state is PostsStateLoading,
+          hasLimit: (state is PostsStateLoaded) && state.hasLimit,
+          onLoadMore: () => context.read<PostCubit>().loadPosts(),
+          separator: Divider(color: Colors.grey[400]),
+          itemBuilder: (_, index) {
+            return index < posts.length
+                ? _PostListItem(post: posts[index])
+                : const Center(child: CircularProgressIndicator());
+          },
+        );
+      },
     );
   }
 }
