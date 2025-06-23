@@ -23,32 +23,6 @@ class PostView extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tabController = useTabController(initialLength: 2);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Blog'),
-        bottom: TabBar(
-          controller: tabController,
-          tabs: const <Tab>[
-            Tab(text: 'Posts'),
-            Tab(text: 'Other'),
-          ],
-        ),
-      ),
-      body: TabBarView(
-        controller: tabController,
-        children: const <Widget>[_PostList(), Offstage()],
-      ),
-    );
-  }
-}
-
-class _PostList extends HookWidget {
-  const _PostList();
-
-  @override
-  Widget build(BuildContext context) {
     final scrollController = useScrollController();
 
     scrollController.addListener(() {
@@ -150,7 +124,7 @@ class _PostListItem extends StatelessWidget {
                   const Gap(16),
                   RichText(
                     text: const TextSpan(
-                      text: 'Read more ',
+                      text: 'Read more... ',
                       style: TextStyle(fontSize: 14, color: Color(0xFF5173da)),
                       children: <InlineSpan>[
                         WidgetSpan(
