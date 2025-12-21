@@ -60,43 +60,32 @@ class _PostListItem extends StatelessWidget {
       child: SizedBox(
         width: MediaQuery.sizeOf(context).width,
         child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: .min,
+          crossAxisAlignment: .start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
+              padding: const .symmetric(vertical: 16, horizontal: 24),
               child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: .min,
+                crossAxisAlignment: .start,
                 children: <Widget>[
                   Chip(
                     label: const Text(
                       'Community',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w200,
-                      ),
+                      style: TextStyle(color: Colors.white, fontWeight: .w200),
                     ),
                     backgroundColor: const Color(0xFF231e7c),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100),
-                    ),
+                    shape: RoundedRectangleBorder(borderRadius: .circular(100)),
                   ),
                   const Gap(16),
                   Text(
                     post.title,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: const TextStyle(fontSize: 20, fontWeight: .w700),
                   ),
                   const Gap(8),
                   Text(
                     post.body,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                    ),
+                    style: const TextStyle(fontSize: 16, fontWeight: .w400),
                   ),
                   const Gap(16),
                   RichText(
@@ -105,7 +94,7 @@ class _PostListItem extends StatelessWidget {
                       style: TextStyle(fontSize: 14, color: Color(0xFF5173da)),
                       children: <InlineSpan>[
                         WidgetSpan(
-                          alignment: PlaceholderAlignment.middle,
+                          alignment: .middle,
                           child: Icon(
                             Icons.arrow_right_alt,
                             color: Color(0xFF5173da),
@@ -120,11 +109,8 @@ class _PostListItem extends StatelessWidget {
             AspectRatio(
               aspectRatio: 16 / 9,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.network(
-                  'https://picsum.photos/200',
-                  fit: BoxFit.fill,
-                ),
+                borderRadius: .circular(10),
+                child: Image.network('https://picsum.photos/200', fit: .fill),
               ),
             ),
           ],

@@ -63,17 +63,12 @@ class _PhotoListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.antiAliasWithSaveLayer,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: .circular(10)),
       child: AspectRatio(
         aspectRatio: 16 / 9,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Image.network(
-            'https://picsum.photos/200',
-            fit: BoxFit.fill,
-          ),
+          borderRadius: .circular(10),
+          child: Image.network('https://picsum.photos/200', fit: .fill),
         ),
       ),
     );

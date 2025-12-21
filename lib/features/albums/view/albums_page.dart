@@ -65,25 +65,16 @@ class _AlbumListItem extends StatelessWidget {
         leading: ClipOval(
           child: SizedBox.square(
             dimension: 40,
-            child: Image.network(
-              'https://picsum.photos/200',
-              fit: BoxFit.cover,
-            ),
+            child: Image.network('https://picsum.photos/200', fit: .cover),
           ),
         ),
         title: Text(
           'ID: ${album.id}',
-          style: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
-          ),
+          style: const TextStyle(fontSize: 20, fontWeight: .w700),
         ),
         subtitle: Text(
           album.title,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-          ),
+          style: const TextStyle(fontSize: 16, fontWeight: .w400),
         ),
       ),
     );
