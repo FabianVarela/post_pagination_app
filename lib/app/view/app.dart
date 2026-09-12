@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:post_pagination_app/app/router/app_router.dart';
 import 'package:post_pagination_app/l10n/l10n.dart';
 
@@ -17,7 +17,10 @@ class App extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: const [
+        ...AppLocalizations.localizationsDelegates,
+        ...GlobalMaterialLocalizations.delegates,
+      ],
       supportedLocales: AppLocalizations.supportedLocales,
     );
   }

@@ -13,7 +13,8 @@ class AppRegister {
             // ignore: avoid_redundant_argument_values
             baseUrl: const String.fromEnvironment('BASE_API_URL'),
             headers: <String, dynamic>{
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+              'User-Agent':
+                  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                   'AppleWebKit/537.36 (KHTML, like Gecko) '
                   'Chrome/120.0.0.0 Safari/537.36',
               'Accept': 'application/json',

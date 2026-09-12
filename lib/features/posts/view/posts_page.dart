@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:pagination_service/pagination_service.dart';
 import 'package:post_pagination_app/app/widgets/pagination_list_view.dart';
 import 'package:post_pagination_app/features/posts/cubit/posts_cubit.dart';
