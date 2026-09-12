@@ -6,7 +6,7 @@ part 'post_response_model.g.dart';
 @JsonSerializable(createToJson: false)
 class PostResponseModel {
   /// [PostResponseModel] class that get the basic info
-  PostResponseModel({
+  new({
     required this.userId,
     required this.id,
     required this.title,
@@ -14,7 +14,7 @@ class PostResponseModel {
   });
 
   /// Factory that returns a [PostResponseModel] instance
-  factory PostResponseModel.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$PostResponseModelFromJson(json);
 
   /// The post's [userId]

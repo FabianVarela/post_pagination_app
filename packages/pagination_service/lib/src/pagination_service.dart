@@ -9,7 +9,7 @@ import 'package:pagination_service/src/models/posts/post_response_model.dart';
 /// {@endtemplate}
 class PaginationService implements PaginationServiceContract {
   /// {@macro pagination_service}
-  PaginationService({required this.dio});
+  new({required this.dio});
 
   /// [Dio] class to get configuration
   final Dio dio;

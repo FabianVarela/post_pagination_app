@@ -6,14 +6,10 @@ part 'album_response_model.g.dart';
 @JsonSerializable(createToJson: false)
 class AlbumResponseModel {
   /// [AlbumResponseModel] class that get the basic info
-  AlbumResponseModel({
-    required this.userId,
-    required this.id,
-    required this.title,
-  });
+  new({required this.userId, required this.id, required this.title});
 
   /// Factory that returns a [AlbumResponseModel] instance
-  factory AlbumResponseModel.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$AlbumResponseModelFromJson(json);
 
   /// The album's [userId]

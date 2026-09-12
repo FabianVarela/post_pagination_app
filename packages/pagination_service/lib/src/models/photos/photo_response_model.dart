@@ -6,7 +6,7 @@ part 'photo_response_model.g.dart';
 @JsonSerializable(createToJson: false)
 class PhotoResponseModel {
   /// [PhotoResponseModel] class that get the basic info
-  PhotoResponseModel({
+  new({
     required this.albumId,
     required this.id,
     required this.title,
@@ -15,7 +15,7 @@ class PhotoResponseModel {
   });
 
   /// Factory that returns a [PhotoResponseModel] instance
-  factory PhotoResponseModel.fromJson(Map<String, dynamic> json) =>
+  factory fromJson(Map<String, dynamic> json) =>
       _$PhotoResponseModelFromJson(json);
 
   /// The photos's [albumId]
